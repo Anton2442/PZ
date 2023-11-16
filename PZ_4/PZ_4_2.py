@@ -27,7 +27,7 @@ while type(B) != float or B<=0:
         print("Это не число!")
 
 
-while A>B:  # Вычисления
+while A>=B:  # Вычисления
     A -= B
 
 
