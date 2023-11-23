@@ -18,4 +18,4 @@ def asterisk_line(K):
 
 
 for i in range(0, m):
-    asterisk_line(i+1)
+    asterisk_line(i + 1)
