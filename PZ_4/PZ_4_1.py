@@ -4,25 +4,26 @@
 # значением константы e = exp(1).
 
 
-from math import factorial
+check = False
 
-
-N = 2.1
-while type(N) != int or N<=0:
-    N = input("введите целое положительное число: ")
+while check == False:
+    N = input("Введите целое положительное число: ")
     try:
-        if int(N) <= 0:
-            print("Число должно быть больше нуля!")
-        else:
-            N = int(N)
-    except:
+        while not int(N) > 0:
+            N = input("Введите целое положительное число: ")
+        check = True
+        N = int(N)
+    except ValueError:
         print("Число должно быть целым!")
 
 
 result = 1
-while N>=1:
-    result += 1/factorial(N)
-    N -= 1
+for i in range(1, N + 1):
+    summ = 1
+    for a in range(1, i + 1):
+        summ *= a
+    print(summ)
+    result += 1/summ
 
 
 print("Результат:",result)

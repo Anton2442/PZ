@@ -2,12 +2,17 @@
 # строке 1 звездочка, во второй - 2, в третьей -3, ..., в строке с номером m - m звездочек.
 
 
-m = -1.2
-while not (m % 1 == 0) or not (m >= 0): # Ввод числа
+check = False
+
+while check == False:
+    m = input("Введите целое положительное число: ")
     try:
-        m = int(input("Введите целое положительное число m: "))
-    except:
-        pass
+        while  not int(m) > 0:
+            m = input("Введите целое положительное число: ")
+        check = True
+        m = int(m)
+    except ValueError:
+        print("Число должно быть целым!")
 
 
 def asterisk_line(K):

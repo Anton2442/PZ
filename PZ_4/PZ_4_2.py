@@ -3,31 +3,31 @@
 # используя операции умножения и деления, найти длину незанятой части отрезка A.
 
 
-A = 2
-while type(A) != float or A<=0:
+check = False
+while not check:
     A = input("введите длину отрезка А: ") # Ввод числа A
     try:
-        if float(A) <= 0:
-            print("Длина должна быть больше нуля!")
-        else:
-            A = float(A)
+        while float(A) < 0:
+            A = input("введите длину отрезка А: ")
+        A = float(A)
+        check = True
     except:
         print("Это не число!")
 
 
-B = 2
-while type(B) != float or B<=0:
-    B = input("введите длину отрезка Б: ")  # Ввод числа Б
+check = False
+while not check:
+    B = input("введите длину отрезка B: ") # Ввод числа B
     try:
-        if float(B) <= 0:
-            print("Длина должна быть больше нуля!")
-        else:
-            B = float(B)
+        while float(B) < 0:
+            B = input("введите длину отрезка B: ")
+        B = float(B)
+        check = True
     except:
         print("Это не число!")
 
 
-while A>=B:  # Вычисления
+while A>=B and B != 0:  # Вычисления
     A -= B
 
 
