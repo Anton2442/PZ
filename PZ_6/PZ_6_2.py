@@ -24,5 +24,5 @@ for index1 in range(N):
                 index1_min = index1
                 index2_min = index2
 
-print(index1_min, index2_min, diff)
-print([list1[index1_min], list1[index2_min]].sort())
+
+print(sorted([list1[index1_min], list1[index2_min]]))
