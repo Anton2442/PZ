@@ -8,9 +8,9 @@ names = ["Андрей", "Виктор", "Максим", "Ольга", "Анто
 random.shuffle(names)
 dict_len = 6
 dict1 = {}
-for i in range(6):
-    dict1[names[i]] = random.randint(15,45)
+for i in range(dict_len):
+    dict1[names[i]] = random.randint(15, 45)
 print(dict1)
 
 # Решение
-print(sum(dict1.values())/len(dict1))
+print(sum(dict1.values()) / len(dict1))
