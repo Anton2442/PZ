@@ -18,11 +18,12 @@ is_25 = {'Анна', 'Алина', 'Алиса', 'Ангелина', 'Ольга
          'Наталья', 'Мария', 'Полина'}
 
 names = input("Введите несколько имён девочек через пробел:\n").split()
+print("")
 
 for name in names:
-    if all(name in s for s in [is_21, is_22, is_23, is_24, is_25]):
+    if name in is_21&is_22&is_23&is_24&is_25:
         print(f"Имя {name} есть во всех группах второго курса.")
-    elif name in name in (is_21 and is_22 and is_23 and is_24 and is_25):
+    elif name in is_21|is_22|is_23|is_24|is_25:
         print(f"Имя {name} встречается не во всех группах второго курса.")
     else:
         print(f"Имени {name} нет в группах второго курса.")
