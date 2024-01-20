@@ -9,12 +9,12 @@
 # последовательности являются соседними):
 
 import math
-
+import random
 
 # Генерация последовательности чисел
 row = []
 row_str = []
-for i in range(-10, 11):
+for i in range(random.randint(-25,-11),random.randint(10,26),2):
     row.append(i)
     row_str.append(str(i))
 text = ", ".join(row_str)
@@ -37,4 +37,5 @@ with open("text_info.txt","w") as f1:
     f1.write(f"Исходные данные: {row_str}\n")
     f1.write(f"Количество элементов: {row_len}\n")
     f1.write(f"Произведение элементов: {row_prod}\n")
-    f1.write(f"Количество пар, для которых произведение элементов делится на 3 {pairs}\n")
+    f1.write(f"Количество пар, для которых произведение элементов делится на 3: {pairs}\n")
+print(row)
