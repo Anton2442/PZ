@@ -14,5 +14,7 @@ for line in f1:
             prep += 1
 print(f"Знаков препинания: {prep}")
 
+lines.insert(1, lines[-1] + "\n")
+lines.pop(-1)
 with open("text18-17_2", "w", encoding="UTF-16") as f2:
-    pass
+     f2.writelines(lines)
