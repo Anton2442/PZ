@@ -2,9 +2,9 @@
 # регистра в нижний.
 
 def str_to_lower(str1):
-    for i in str1:
-        yield i.lower()
+    yield from [i.lower() for i in str1]
 
 str1 = input("Введите строку с сиволами верхнего регистра:\n")
 str2 = "".join([i for i in str_to_lower(str1)])
+print(str_to_lower(str1))
 print(str2)
